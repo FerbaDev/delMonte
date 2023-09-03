@@ -1,9 +1,7 @@
 import { Button } from "@mui/material";
 import { useGlitch } from "react-powerglitch";
 import "../../index.css";
-import { red } from "@mui/material/colors";
-
-const color = red[500];
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   const glitch = useGlitch({
@@ -14,16 +12,17 @@ export const Home = () => {
   return (
     <div>
       <h1 ref={glitch.ref}>Del Monte</h1>
-
-      <Button
-        variant="contained"
-        sx={{
-          backgroundColor: "#616161",
-          ":hover": { backgroundColor: "#757575" },
-        }}
-      >
-        ir a la app
-      </Button>
+      <Link to={"/inicio"}>
+        <Button
+          variant="contained"
+          sx={{
+            backgroundColor: "#616161",
+            ":hover": { backgroundColor: "#757575" },
+          }}
+        >
+          ir a la app
+        </Button>
+      </Link>
     </div>
   );
 };
