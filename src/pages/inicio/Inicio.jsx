@@ -7,7 +7,15 @@ export const Inicio = () => {
       <h1>Error 420</h1>
       <p>Este sitio se está armando</p>
       <Link to={-1}>
-        <Button variant="contained">volver</Button>
+        <Button
+          variant="contained"
+          sx={{
+            backgroundColor: "#616161",
+            ":hover": { backgroundColor: "#757575" },
+          }}
+        >
+          volver
+        </Button>
       </Link>
     </div>
   );
